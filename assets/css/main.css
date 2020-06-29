@@ -130,7 +130,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2.25em 0;
+		margin: 0 0 1em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2227,7 +2227,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2.25em 0;
+		margin: 0 0 0em 0;
 		padding-left: 1em;
 	}
 
@@ -2386,7 +2386,7 @@ input, select, textarea {
 		ul.feature-icons li {
 			text-decoration: none;
 			display: inline-block;
-			margin: 0 0 1.6875em 0;
+			margin: 0 0 0.8em 0;
 			padding: 0.35em 0 0 3.5em;
 			position: relative;
 			vertical-align: top;
@@ -2705,7 +2705,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background: #477982;/*#2d6079;4acaa8;*/
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
@@ -2813,7 +2813,7 @@ input, select, textarea {
 
 						#header > nav ul li a.active {
 							background: #fff;
-							color: #4acaa8 !important;
+							color: #477982 !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -2908,7 +2908,7 @@ input, select, textarea {
 		/* Main */
 
 			#main > section > .container {
-				padding: 4em 0 2em 0;
+				padding: 2em 0 2em 0;
 			}
 
 	}
@@ -3081,7 +3081,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: #477982;/*#2d6079;#4acaa8;*/
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
