@@ -137,8 +137,8 @@ body {
 
 .picture-item__img {
   object-fit: cover;
-  border-radius: 50%;
   box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+  border-radius: 50%;
   height: 300px;
   width: 300px;
 }
@@ -244,18 +244,19 @@ body {
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .content h1{
   font-size: 1.3em;
+  text-align: center;
 }
 
 .content-text{
   align-items: center;
-  font-size: 0.9em;
+  font-size: 1em;
   color: var(--color-black);
-  margin: 5px;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 .position{
@@ -270,7 +271,7 @@ body {
 @media screen and (min-width: 1024px){
   .content-text{
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
   }
 }
 

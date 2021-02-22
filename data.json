@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "Tittle": "Platzi Badges",
+      "Stack": "React.JS",
+      "Level": "Intermediate",
+      "Description": "Platzi Badges is a CRUD React.JS application to save the details of the people"
+    },
+    {
+      "Tittle": "iAxis",
+      "Stack": "Node.JS, React.JS, MongoDB",
+      "Level": "Advanced",
+      "Description": "Create as a learning exercise a real time chat, used by multiusers in different browsers"
+    }
+  ]
+}
