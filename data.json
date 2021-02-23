@@ -1,16 +1,14 @@
 {
   "projects": [
     {
-      "Tittle": "Platzi Badges",
-      "Stack": "React.JS",
-      "Level": "Intermediate",
-      "Description": "Platzi Badges is a CRUD React.JS application to save the details of the people"
-    },
-    {
-      "Tittle": "iAxis",
-      "Stack": "Node.JS, React.JS, MongoDB",
-      "Level": "Advanced",
-      "Description": "Create as a learning exercise a real time chat, used by multiusers in different browsers"
+      "image": "0",
+      "tittle": "Platzi Badges",
+      "source": "./images/0.png",
+      "stack": "Javascript, React.JS",
+      "level": "Intermediate",
+      "github": "https://github.com/jonathangonzalezbotero/Hello_react",
+      "url": "https://badgesreact.netlify.app/",
+      "description": "Platzi Badges is a CRUD React.JS application to save the personal details of the people who come to a meeting"
     }
   ]
 }

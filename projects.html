@@ -10,7 +10,7 @@
 		<script src="./javascript/main.js"></script>
 		<script type="text/javascript" src="data.json"></script>
 	</head>
-	<body>
+	<body onload="loadProjects()">
     <header class="header">
 				<div class="header__name">
 					<a href="/index.html"><h2>Jonathan<br/>Gonzalez Botero</h2></a>
@@ -24,23 +24,11 @@
     </header>
 
 		<section class="carousel">
-      <!-- <h1 class="tittle">My projects</h1> -->
-			<div class="carousel__container">
-				<div class="carousel-item">
-					<img onclick="loadDetails(0)" class="carousel-item__img" src="./images/0.png" alt="City">
-				</div>
-				<div class="carousel-item">
-					<img onclick="loadDetails(1)" class="carousel-item__img" src="./images/1.png" alt="City">
-				</div>
-			</div>
+			<div class="carousel__container"></div>
+
 			<div class="details">
 				<div class="details__image"></div>
-				<div class="details__description">
-					<div class="description">
-						<p class="technologies"></p>
-						<p class="text"></p>
-					</div>
-				</div>
+				<div class="details__description"></div>
 			</div>
 		</section>
 
