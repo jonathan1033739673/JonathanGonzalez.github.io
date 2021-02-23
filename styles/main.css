@@ -35,14 +35,11 @@ body {
 
 .header{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 120px;
   padding: 40px 30px;
-}
-
-.header__name{
-  display: none;
 }
 
 .header__name h2{
@@ -373,9 +370,6 @@ body {
   .header{
     display: flex;
     justify-content: space-between;
-  }
-  .header__name{
-    display: block;
   }
 
   .header__menu{
