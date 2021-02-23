@@ -41,8 +41,8 @@ function loadText(project){
       level.setAttribute('class', 'text');
       level.innerHTML = '<b>Level:</b>' + data.projects[project].level;
 
+      var github = createNode("a");
       if(data.projects[project].github){
-        var github = createNode("a");
         var githubText = createNode("p");
         github.href = data.projects[project].github;
         github.setAttribute("target", "_blank");
@@ -50,8 +50,8 @@ function loadText(project){
         githubText.innerHTML = '<span class="title_description">github:</span>' + data.projects[project].github;
         append(github, githubText);
       }
+      var url = createNode("a");
       if(data.projects[project].url){
-        var url = createNode("a");
         var urlText = createNode("p");
         url.href = data.projects[project].url;
         url.setAttribute("target", "_blank");
@@ -63,6 +63,7 @@ function loadText(project){
       var description = createNode("p");
       description.setAttribute('class', 'text');
       description.innerHTML = '<b>Brief Description</b><br>' + data.projects[project].description;
+
       append(div_description[0], tittle);
       append(div_description[0], stack);
       append(div_description[0], level);

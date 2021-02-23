@@ -20,7 +20,7 @@
     justify-content: center;
     white-space: nowrap;
     flex-wrap: wrap;
-    margin: 70px 0px;
+    margin: 0px 0px 70px;
     padding: 10px;
   }
   
@@ -54,7 +54,7 @@
       3.-
   */
   .carousel-item:hover ~ .carousel-item {
-    transform: translate3d(70px, 0, 0);
+    transform: translate3d(0, 80px, 0);
   }
   
   /*
@@ -81,7 +81,7 @@
    */
 
   .details{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -97,8 +97,7 @@
   .details__description{
     display: flex;
     flex-direction: column;
-    /* width: 50%;
-    margin-left: 30px; */
+    width: 100%;
   }
 
   .tittle{
@@ -137,6 +136,13 @@
 ******************** MEDIA QUERYS ********************
 */
 @media screen and (min-width:768px){
+
+  .carousel__container {
+    margin: 70px 0px;
+  }
+  .carousel-item:hover ~ .carousel-item {
+    transform: translate3d(70px, 0, 0);
+  }
 
   .details{
     display: flex;

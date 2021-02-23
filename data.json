@@ -9,6 +9,16 @@
       "github": "https://github.com/jonathangonzalezbotero/Hello_react",
       "url": "https://badgesreact.netlify.app/",
       "description": "Platzi Badges is a CRUD React.JS application to save the personal details of the people who come to a meeting"
+    },
+    {
+      "image": "1",
+      "tittle": "iAxis",
+      "source": "./images/1.png",
+      "stack": "Oracle 12c, Java EE, JReports",
+      "level": "Advanced",
+      "github": "",
+      "url": "",
+      "description": "Java web Application to manage all the information in an insurance company"
     }
   ]
 }
