@@ -14,7 +14,7 @@ function loadProjects(){
         div.setAttribute('class', 'carousel-item');
         let img = createNode('img');
         img.setAttribute('class', 'carousel-item__img');
-        img.setAttribute('onclick', 'loadDetails('+project.image+')');
+        img.setAttribute('onmouseover', 'loadDetails('+project.image+')');
         img.src = project.source;
         append(div, img);
         append(container[0], div);
@@ -23,6 +23,7 @@ function loadProjects(){
     .catch(function(err) {
       console.log('Fetch Load Projects Error: ', err);
     });
+    loadDetails(0);
 }
 
 function loadText(project){
@@ -39,25 +40,30 @@ function loadText(project){
       stack.innerHTML = data.projects[project].stack;
       var level = createNode("p");
       level.setAttribute('class', 'text');
-      level.innerHTML = '<b>Level:</b>' + data.projects[project].level;
+      level.innerHTML = '<b>Level</b><br>' + data.projects[project].level;
 
-      var github = createNode("a");
+      var githubText = createNode("p");
       if(data.projects[project].github){
-        var githubText = createNode("p");
-        github.href = data.projects[project].github;
+        githubText.setAttribute('class', 'text');
+        githubText.innerHTML = '<b>github</b><br>';
+        var github = createNode("a");
+        github.setAttribute('class', 'url');
         github.setAttribute("target", "_blank");
-        githubText.setAttribute('class', 'url');
-        githubText.innerHTML = '<span class="title_description">github:</span>' + data.projects[project].github;
-        append(github, githubText);
+        github.text = data.projects[project].github.slice(18);
+        github.href = data.projects[project].github;
+        append(githubText, github);
       }
-      var url = createNode("a");
+
+      var urlText = createNode("a");
       if(data.projects[project].url){
-        var urlText = createNode("p");
-        url.href = data.projects[project].url;
+        urlText.setAttribute('class', 'text');
+        urlText.innerHTML = '<b>url</b><br>';
+        var url = createNode("a");
+        url.setAttribute('class', 'url');
         url.setAttribute("target", "_blank");
-        urlText.setAttribute('class', 'url');
-        urlText.innerHTML = '<span class="title_description">url:</span>' + data.projects[project].url;
-        append(url, urlText);
+        url.text = data.projects[project].url;
+        url.href = data.projects[project].url;
+        append(urlText, url);
       }
 
       var description = createNode("p");
@@ -67,8 +73,8 @@ function loadText(project){
       append(div_description[0], tittle);
       append(div_description[0], stack);
       append(div_description[0], level);
-      append(div_description[0], github);
-      append(div_description[0], url);
+      append(div_description[0], githubText);
+      append(div_description[0], urlText);
       append(div_description[0], description);
     })
     .catch(function(err) {

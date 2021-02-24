@@ -5,7 +5,6 @@
   4.- Pos:Relative porque queremos que los elementos que hereden se ajusten con base en este elemento*/
   .carousel {
     width: 100%;
-    overflow: scroll;
     padding: 50px 30px;
     position: relative;
   }
@@ -18,9 +17,7 @@
   .carousel__container {
     display: flex;
     justify-content: center;
-    white-space: nowrap;
     flex-wrap: wrap;
-    margin: 0px 0px 70px;
     padding: 10px;
   }
   
@@ -34,27 +31,15 @@
       10.- Ajusta los elementos para que no se salgan y empiecen de izq a derecha
   */
   .carousel-item {
-    width: 150px;
-    height: 200px;
+    width: calc(var(--width-project) - 100px);
+    height: calc(var(--width-project) - 100px);
     border-radius: 30px;
     overflow: hidden;
-    margin-right: 10px;
+    margin-bottom: 20px;
     display: inline-block;
     cursor: pointer;
     transition: 450ms;
-    transform-origin: center left;
     position: relative;
-    text-align: left;
-  }
-  
-  /*
-      Carousel hover.
-      1.- Desplaza los elemenots hacia la derecha
-      2.- ~ Selecciona todos los elementos excepto el elemento que está seleccionado
-      3.-
-  */
-  .carousel-item:hover ~ .carousel-item {
-    transform: translate3d(0, 80px, 0);
   }
   
   /*
@@ -62,7 +47,7 @@
       2.- Cuando se le haga hover a un elemento especīfico, pone la opacidad en 1.
   */
   .carousel__container:hover .carousel-item:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     opacity: 1;
   }
   
@@ -71,9 +56,9 @@
     2.- la propiedad object-fit hace que mi imagen recupere su forma original y no quede cortada por las medidas dadas
   */
   .carousel-item__img {
-    width: 150px;
-    height: 200px;
-    /* object-fit: cover; */
+    width: calc(var(--width-project) - 100px);
+    height: calc(var(--width-project) - 100px);
+    /* object-fit:unset ; */
   }
 
   /* 
@@ -97,6 +82,8 @@
   .details__description{
     display: flex;
     flex-direction: column;
+    /* flex-wrap: wrap; */
+    text-align: justify;
     width: 100%;
   }
 
@@ -118,18 +105,12 @@
   
   .text{
     margin: 15px 0px;
-    text-align: justify;
   }
   
   .url{
     margin: 15px 0px;
     color: var(--color-black);
     text-decoration: underline;
-  }
-  
-  .title_description{
-    text-decoration:none;
-    font-weight: bold;
   }
 
 /* 
@@ -143,8 +124,9 @@
   .carousel__container {
     margin: 70px 0px;
   }
-  .carousel-item:hover ~ .carousel-item {
-    transform: translate3d(70px, 0, 0);
+
+  .carousel-item {
+    margin-right: 20px;
   }
 
   .details{
@@ -164,14 +146,8 @@
     height: 450px;
   }
 
-  .carousel-item {
-    width: 200px;
-    height: 250px;
-  }
-
-  .carousel-item__img {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
+  .carousel-item, .carousel-item__img{
+    width: var(--width-project);
+    height: var(--heigth-project);
   }
 }
