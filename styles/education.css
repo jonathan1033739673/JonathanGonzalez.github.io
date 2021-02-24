@@ -1,0 +1,153 @@
+
+/*1.- Width del 100% para que abarque toda la pantalla.
+  2.- Con overflow establecemos la propiedad de scroll
+  3.- padding del 30% para tener un margen de vista
+  4.- Pos:Relative porque queremos que los elementos que hereden se ajusten con base en este elemento*/
+  .carousel {
+    width: 100%;
+    padding: 50px 30px;
+    position: relative;
+  }
+  
+  /* 
+      1.- WhiteSpace nowrap Enlista todos los elementos en un solo renglón.
+      2.- Establecemmos un pequeño espaciado entre los elementos de la lista.
+      3.- Padding de 10px para evitar que se nos corte el elemento cuando hagamos hover
+  */
+  .carousel__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  /* 1-3 Color, altura, anchura.
+      4.- Qué tan curvo queremos nuestro borde
+      5.- Overflow: Hidden Para que tome los estilos
+      6.- Margin 10px separación entre elementos
+      7.-InLineBlock: Un item al lado del otro
+      8.-Cambia el icono del mouse cuando selecciona el elemento
+      9.-Suaviza la transcisión para que se vea agradable
+      10.- Ajusta los elementos para que no se salgan y empiecen de izq a derecha
+  */
+  .carousel-item {
+    width: calc(var(--width-project) - 100px);
+    height: calc(var(--width-project) - 100px);
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms;
+    position: relative;
+  }
+  
+  /*
+      1.- Escala en 1.5 la imagen seleccionada
+      2.- Cuando se le haga hover a un elemento especīfico, pone la opacidad en 1.
+  */
+  .carousel__container:hover .carousel-item:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  /*
+    1.- nuestra imagen debe ser el mismo tamano que indicadmos en el item
+    2.- la propiedad object-fit hace que mi imagen recupere su forma original y no quede cortada por las medidas dadas
+  */
+  .carousel-item__img {
+    width: calc(var(--width-project) - 100px);
+    height: calc(var(--width-project) - 100px);
+    /* object-fit:unset ; */
+  }
+
+  /* 
+  -----------------------------------------------------------
+   */
+
+  .details{
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .picture{
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+    width: 300px;
+    height: 300px;
+  }
+
+  .details__description{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    text-align: justify;
+    width: 100%;
+  }
+
+  .tittle{
+    background-color: var(--color-blueLight);
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .stack{
+    margin: 30px 0px;
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .text{
+    margin: 15px 0px;
+  }
+  
+  .url{
+    margin: 15px 0px;
+    color: var(--color-black);
+    text-decoration: underline;
+  }
+
+/* 
+******************** MEDIA QUERYS ********************
+*/
+@media screen and (min-width:768px){
+  .carousel {
+    padding: 20px 30px;
+  }
+
+  .carousel__container {
+    margin: 70px 0px;
+  }
+
+  .carousel-item {
+    margin-right: 20px;
+  }
+
+  .details{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .details__description{
+    width: 50%;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width:1024px){
+  .picture{
+    width: 500px;
+    height: 450px;
+  }
+
+  .carousel-item, .carousel-item__img{
+    width: var(--width-project);
+    height: var(--heigth-project);
+  }
+}

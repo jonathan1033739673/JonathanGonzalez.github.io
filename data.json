@@ -1,9 +1,9 @@
 {
   "projects": [
     {
-      "image": "0",
+      "item": "0",
       "tittle": "Platzi Badges",
-      "source": "./images/0.png",
+      "source": "./images/project_0.png",
       "stack": "Javascript, React.JS",
       "level": "Intermediate",
       "github": "https://github.com/jonathangonzalezbotero/Hello_react",
@@ -11,14 +11,46 @@
       "description": "Platzi Badges is a CRUD React.JS application to save the personal details of the people who come to a meeting"
     },
     {
-      "image": "1",
+      "item": "1",
       "tittle": "iAxis",
-      "source": "./images/1.png",
+      "source": "./images/project_1.png",
       "stack": "Oracle 12c, Java EE, JReports",
       "level": "Advanced",
       "github": "",
       "url": "",
       "description": "Java web Application to manage all the information in an insurance company"
+    }
+  ],
+  "education": [
+    {
+      "item": "0",
+      "level": "primary",
+      "status": "completed",
+      "tittle": "Bachelor's Degree Computer Science",
+      "country": "Colombia",
+      "source": "./images/education_0.png",
+      "year": "2015",
+      "url": ""
+    },
+    {
+      "item": "1",
+      "level": "primary",
+      "status": "pending",
+      "tittle": "Diploma of Information Technology",
+      "country": "Australia",
+      "source": "./images/education_1.png",
+      "year": "2021",
+      "url": ""
+    },
+    {
+      "item": "2",
+      "level": "secondary",
+      "status": "completed",
+      "tittle": "AWS Cloud Fundamentals",
+      "country": "",
+      "source": "./images/education_2.png",
+      "year": "2020",
+      "url": "https://platzi.com/p/jonathangonzalezbotero/curso/1323-aws-cloud/diploma/detalle/"
     }
   ]
 }
