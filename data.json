@@ -33,16 +33,6 @@
       "url": ""
     },
     {
-      "item": "1",
-      "level": "primary",
-      "status": "pending",
-      "tittle": "Diploma of Information Technology",
-      "country": "Australia",
-      "source": "./images/education_1.png",
-      "year": "2021",
-      "url": ""
-    },
-    {
       "item": "2",
       "level": "secondary",
       "status": "completed",
@@ -51,6 +41,56 @@
       "source": "./images/education_2.png",
       "year": "2020",
       "url": "https://platzi.com/p/jonathangonzalezbotero/curso/1323-aws-cloud/diploma/detalle/"
+    },
+    {
+      "item": "3",
+      "level": "secondary",
+      "status": "completed",
+      "tittle": "Javascript Fundamentals",
+      "country": "",
+      "source": "./images/education_3.png",
+      "year": "2020",
+      "url": "https://platzi.com/p/jonathangonzalezbotero/curso/1339-fundamentos-javascript/diploma/detalle/"
+    },
+    {
+      "item": "4",
+      "level": "secondary",
+      "status": "completed",
+      "tittle": "Git and GitHub professional course",
+      "country": "",
+      "source": "./images/education_4.png",
+      "year": "2020",
+      "url": "https://platzi.com/p/jonathangonzalezbotero/curso/1557-git-github/diploma/detalle/"
+    },
+    {
+      "item": "5",
+      "level": "secondary",
+      "status": "completed",
+      "tittle": "React.JS Course",
+      "country": "",
+      "source": "./images/education_5.png",
+      "year": "2020",
+      "url": "https://platzi.com/p/jonathangonzalezbotero/curso/1548-react/diploma/detalle/"
+    },
+    {
+      "item": "6",
+      "level": "secondary",
+      "status": "completed",
+      "tittle": "Node.JS Course",
+      "country": "",
+      "source": "./images/education_6.png",
+      "year": "2020",
+      "url": "https://platzi.com/p/jonathangonzalezbotero/curso/1689-backend-js/diploma/detalle/"
+    },
+    {
+      "item": "7",
+      "level": "secondary",
+      "status": "completed",
+      "tittle": "MongoDB",
+      "country": "",
+      "source": "./images/education_7.png",
+      "year": "2020",
+      "url": "https://platzi.com/p/jonathangonzalezbotero/curso/1533-mongodb/diploma/detalle/"
     }
   ]
 }

@@ -1,28 +1,38 @@
-function loadDetails(project){
-  loadImage(project);
-  loadText(project);
+function loadDetails(educationItem){
+  loadImage(educationItem);
+  // loadText(educationItem);
 }
 
-function loadProjects(){
-  const container = document.getElementsByClassName('carousel__container');
+function loadContent(){
+  const primary = document.getElementsByClassName('images-primary');
+  const secondary = document.getElementsByClassName('images-secondary');
   fetch("data.json")
     .then((resp) => resp.json())
     .then(function(data) {
-      var projects = data.projects;
-      return projects.map(function(project) {
+      var education = data.education;
+      return education.map(function(educationItem) {
         let div = createNode('div');
-        div.setAttribute('class', 'carousel-item');
+        div.setAttribute('class', 'image-item');
+        var tittle = createNode("h3");
+        tittle.setAttribute('class', 'text');
+        tittle.innerHTML = educationItem.tittle;
         let img = createNode('img');
-        img.setAttribute('class', 'carousel-item__img');
-        img.setAttribute('onmouseover', 'loadDetails('+project.image+')');
-        img.src = project.source;
+        img.setAttribute('class', 'image-item__img');
+        img.setAttribute('onmouseover', 'loadDetails('+educationItem.item+')');
+        img.src = educationItem.source;
+        append(div, tittle);
         append(div, img);
-        append(container[0], div);
+        if(educationItem.level == 'primary'){
+          append(primary[0], div);
+        }else{
+          append(secondary[0], div);
+        }
       })
     })
     .catch(function(err) {
-      console.log('Fetch Load Projects Error: ', err);
+      console.log('Fetch Load Education Error: ', err);
     });
+
     loadDetails(0);
 }
 
@@ -82,13 +92,12 @@ function loadText(project){
     });
 }
 
-function loadImage(project){
-  var details__image = document.getElementsByClassName("details__image");
+function loadImage(educationItem){
+  var details__image = document.getElementsByClassName("details-image");
   var image = createNode("img");
   clearElements(details__image[0]);
   image.setAttribute('class', 'picture');
-  console.log("../images/project_"+project+".png");
-  image.src = "../images/project_"+project+".png";
+  image.src = "../images/education_"+educationItem+".png";
   append(details__image[0], image);
 }
 
