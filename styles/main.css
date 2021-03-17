@@ -32,6 +32,8 @@ body {
 */
 header{
   margin-bottom: 80px;
+  position: sticky;
+  top: 0;
 }
 
 label .menu {
@@ -112,13 +114,13 @@ label input:checked + .menu + ul {
   opacity: 1;
 }
 
-label .ul {
+label ul {
   z-index: 200;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 300%);
   opacity: 0;
   display: none;
   -webkit-transition: .25s 0s ease-in-out;

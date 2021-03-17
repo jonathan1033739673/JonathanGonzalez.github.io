@@ -84,7 +84,7 @@
     flex-direction: column;
     text-align: justify;
     width: 100%;
-    /* margin: 0px 20px; */
+    margin: 0px 20px;
   }
 
   .tittle{
@@ -127,11 +127,11 @@
   .details{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
   }
 
   .details__description{
     width: 50%;
-    margin-left: 30px;
   }
 }
 
