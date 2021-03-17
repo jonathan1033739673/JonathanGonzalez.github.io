@@ -87,7 +87,7 @@ function loadImage(project){
   var image = createNode("img");
   clearElements(details__image[0]);
   image.setAttribute('class', 'picture');
-  image.src = "../images/project_"+project+".png";
+  image.src = "../assets/project_"+project+".png";
   append(details__image[0], image);
 }
 

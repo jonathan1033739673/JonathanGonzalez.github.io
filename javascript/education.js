@@ -97,7 +97,7 @@ function loadImage(educationItem){
   var image = createNode("img");
   clearElements(details__image[0]);
   image.setAttribute('class', 'picture');
-  image.src = "../images/education_"+educationItem+".png";
+  image.src = "../assets/education_"+educationItem+".png";
   append(details__image[0], image);
 }
 
