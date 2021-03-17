@@ -9,15 +9,35 @@ function loadProjects(){
     .then((resp) => resp.json())
     .then(function(data) {
       var projects = data.projects;
-      return projects.map(function(project) {
-        let div = createNode('div');
-        div.setAttribute('class', 'carousel-item');
+      projects.map(function(project) {
+        let cards = createNode('div');
+        cards.setAttribute('class', 'cards');
         let img = createNode('img');
-        img.setAttribute('class', 'carousel-item__img');
-        img.setAttribute('onmouseover', 'loadDetails('+project.item+')');
+        img.setAttribute('class', 'imagen');
         img.src = project.source;
-        append(div, img);
-        append(container[0], div);
+        let details = createNode('div');
+        details.setAttribute('class', 'cards__details');
+        var tags = project.tags;
+        for(x in  tags){
+          let span = createNode('span');
+          span.setAttribute('class', 'tag');
+          span.innerHTML = tags[x];
+          append(details, span);
+        };
+        let name = createNode('div');
+        name.setAttribute('class', 'name');
+        name.innerHTML += project.tittle;
+        append(details, name);
+        let more = createNode('button');
+        more.setAttribute('class', 'more');
+        more.innerText = 'Read More';
+        more.setAttribute('onmouseover', 'loadDetails('+project.item+')');
+        more.setAttribute('onclick', 'loadDetails('+project.item+')');
+        append(details, more);
+        
+        append(cards, img);
+        append(cards, details);
+        append(container[0], cards);
       })
     })
     .catch(function(err) {
