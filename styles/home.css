@@ -14,10 +14,11 @@
   align-items: center;
   justify-content: center;
   height: auto;
+  margin-top: 10px;
 }
 
 .about__info{
-  margin: 30px 30px;
+  margin: 0px 30px 30px;
 }
 
 .about__info h1{
