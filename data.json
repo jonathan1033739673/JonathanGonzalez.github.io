@@ -3,6 +3,7 @@
     {
       "item": "0",
       "tittle": "Platzi Badges",
+      "tags": ["Javascript", "React.JS"],
       "source": "./assets/project_0.png",
       "stack": "Javascript, React.JS",
       "level": "Intermediate",
@@ -13,6 +14,7 @@
     {
       "item": "1",
       "tittle": "iAxis",
+      "tags": ["Oracle 12c", "Java EE", "JReports"],
       "source": "./assets/project_1.png",
       "stack": "Oracle 12c, Java EE, JReports",
       "level": "Advanced",
