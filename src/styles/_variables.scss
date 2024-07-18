@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'Plain';
+  src: url('../assets/localfonts/Plain-Regular.woff2') format('woff2'),
+      url('../assets/localfonts/Plain-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plain';
+  src: url('../assets/localfonts/Plain-Light.woff2') format('woff2'),
+      url('../assets/localfonts/Plain-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plain';
+  src: url('../assets/localfonts/Plain-Bold.woff2') format('woff2'),
+      url('../assets/localfonts/Plain-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --primary-color:        #ffd500;
+  --white-color:          #ffffff;
+  --dark-color:           #010101;
+  --menu-bg-color:        #212529;
+
+  --gray-color:           #909090;
+  --p-color:              #7d7a7a;
+
+  --base-font-family:     "Plus Jakarta Sans", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-weight-bold:     600;
+  --font-weight-normal:   400;
+  --font-weight-light:    300;
+
+  --h1-font-size:         56px;
+  --h2-font-size:         48px;
+  --h3-font-size:         38px;
+  --h4-font-size:         34px;
+  --h5-font-size:         30px;
+  --h6-font-size:         24px;
+  --p-font-size:          18px;
+  --base-font-size:       16px;
+  --button-font-size:     20px;
+
+  --border-radius-large:  100%;
+  --border-radius-medium: 80px;
+  --border-radius-small:  40px;
+}
+
+body {
+  font-family: var(--base-font-family);
+}
+
+
+/*---------------------------------------
+   TYPOGRAPHY              
+-----------------------------------------*/
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h1,
+h3 {
+  font-weight: var(--font-weight-light);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--h6-font-size);
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.3px;
+  line-height: 2em;
+}
+
+.custom-icon {
+  font-size: 12px;
+  position: relative;
+  bottom: 3px;
+  left: 5px;
+  transform: rotate(-25deg);
+}
+
+
+/* CUSTOM BUTTON */
+.custom-btn {
+  background: var(--dark-color);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  color: var(--white-color);
+  letter-spacing: 0.2px;
+  padding: 6px 36px 10px 36px;
+  font-size: var(--button-font-size);
+  white-space: nowrap;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+  color: var(--dark-color);
+  background: var(--primary-color);
+}
+
+
+/*---------------------------------------
+   GENERAL               
+-----------------------------------------*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: all 0.4s linear;
+}
+
+a:hover  {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, var(--primary-color) 0%, var(--dark-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gap-0 {
+  gap: 0 !important;
+}
+
+.gap-1 {
+  gap: 0.25rem !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 1rem !important;
+}
+
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
+.fs-2 {
+  font-size: calc(1.325rem + 0.9vw) !important;
+}
+
+  /*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+
+  @media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    .email-link {
+      font-size: 28px;
+    }
+  }
